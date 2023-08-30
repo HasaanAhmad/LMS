@@ -4,8 +4,8 @@ import { StarIcon } from "@heroicons/react/24/solid";
 
 const Banner = () => {
   return (
-    <div id="home-section" className="bg-lightkblue">
-      <div className="mx-auto max-w-7xl pt-20 sm:pb-24 px-6">
+    <div id="home-section" className="bg-lightkblue " style={{ background: "linear-gradient(to bottom, #DCDDEc, #C3E1FD)" }}>
+      <div className="mx-auto max-w-7xl pt-20 sm:pb-24 px-6 " >
         <div className="grid grid-cols-1 lg:grid-cols-12 space-x-1">
           <div className="col-span-6 flex flex-col justify-evenly">
             <div className="flex gap-2 mx-auto lg:mx-0">
@@ -29,14 +29,14 @@ const Banner = () => {
 
             <div className="flex justify-between items-center py-6">
               <div className="flex gap-4">
-                <h3 className="text-red text-22xl font-medium text-[#c5c7e0]">
+                <h3 className="text-red text-22xl font-medium text-[#3B8383]">
                   Trusted By 5000+
                   <br />
                   students
                 </h3>
                 <div className="flex flex-col">
                 <h3 className="text-22xl text-center font-medium">4.7</h3>
-                <div className="flex text-[#c5c7e0]">
+                <div className="flex text-[#3B8383]">
                   <StarIcon className="h-5 w-5 text-gold" />
                   <StarIcon className="h-5 w-5 text-gold" />
                   <StarIcon className="h-5 w-5 text-gold" />
