@@ -1,19 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-interface ProductType {
-    id: number;
-    section: string;
-    link: string[];
-}
-
-interface socialLinks {
-    imgSrc: string;
-    link: string;
-    width: number;
-}
-
-const socialLinks: socialLinks[] = [
+const socialLinks = [
     {
         imgSrc: '/assets/footer/facebook.svg',
         link: 'www.facebook.com',
@@ -29,10 +17,9 @@ const socialLinks: socialLinks[] = [
         link: 'www.twitter.com',
         width: 14
     },
+];
 
-]
-
-const products: ProductType[] = [
+const products = [
     {
         id: 1,
         section: "Company",
@@ -42,18 +29,16 @@ const products: ProductType[] = [
         id: 2,
         section: "Contact",
         link: ['Help/FAQ', 'Press', 'Affiliates', 'Hotel owners', 'Partners']
-    }
-    ,
+    },
     {
         id: 3,
         section: "More",
         link: ['Airline fees', 'Airlines', 'Low fare tips', 'Badges &', 'Certificates']
     }
-]
+];
 
-const footer = () => {
+const Footer = () => {
     return (
-
         <div className="mx-auto max-w-2xl sm:pt-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
             <div className="my-12 grid grid-cols-1 gap-y-10 sm:grid-cols-6 lg:grid-cols-12">
 
@@ -65,26 +50,23 @@ const footer = () => {
                     </div>
                     <h3 className='text-xs font-medium text-gunmetalgray lh-160 mt-5 mb-4 lg:mb-16'> Open an account in minutes, get full financial <br /> control for much longer.</h3>
                     <div className='flex gap-4'>
-
                         {socialLinks.map((items, i) => (
-                        <Link href={items.link} key={i}>
-                            <div className="bg-white h-12 w-12 shadow-xl text-base rounded-full flex items-center justify-center footer-icons hover:bg-ultramarine">
-                                <Image src={items.imgSrc} alt={items.imgSrc} width={items.width} height={2} className="sepiaa" />
-                            </div>
-                        </Link>
+                            <Link href={items.link} key={i}>
+                                <div className="bg-white h-12 w-12 shadow-xl text-base rounded-full flex items-center justify-center footer-icons hover:bg-ultramarine">
+                                    <Image src={items.imgSrc} alt={items.imgSrc} width={items.width} height={2} className="sepiaa" />
+                                </div>
+                            </Link>
                         ))}
-
                     </div>
                 </div>
 
                 {/* CLOUMN-2/3/4 */}
 
-
                 {products.map((product) => (
                     <div key={product.id} className="sm:col-span-2">
                         <p className="text-black text-lg font-medium mb-9">{product.section}</p>
                         <ul>
-                            {product.link.map((link: string, index: number) => (
+                            {product.link.map((link, index) => (
                                 <li key={index} className='mb-5'>
                                     <Link href="/" className="text-darkgray text-base font-normal mb-6 space-links">{link}</Link>
                                 </li>
@@ -92,7 +74,6 @@ const footer = () => {
                         </ul>
                     </div>
                 ))}
-
             </div>
 
             {/* All Rights Reserved */}
@@ -106,7 +87,7 @@ const footer = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default footer;
+export default Footer;

@@ -1,7 +1,7 @@
 import Image from 'next/image';
+import React from 'react'
 
 const Banner = () => {
-
     return (
         <div id="home-section" className='bg-lightkblue'>
             <div className="mx-auto max-w-7xl pt-20 sm:pb-24 px-6">
@@ -50,4 +50,4 @@ const Banner = () => {
     )
 }
 
-export default Banner;
+export default Banner
