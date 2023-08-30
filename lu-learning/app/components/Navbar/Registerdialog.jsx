@@ -18,8 +18,8 @@ const Register = () => {
         <>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto  sm:pr-0">
                 <div className='hidden lg:block'>
-                    <button className="text-Blueviolet text-lg font-medium ml-9 py-5 px-16 transition duration-150 ease-in-out rounded-full bg-semiblueviolet hover:text-white hover:bg-Blueviolet" onClick={openModal}>
-                       Register Now
+                    <button className="text-Blueviolet border-2 text-lg font-medium ml-9 py-5 px-16 transition duration-150 ease-in-out rounded-full bg-semiblueviolet hover:text-white hover:bg-[#666AA9]" onClick={openModal}>
+                        Register Now
                     </button>
                 </div>
             </div>
@@ -119,7 +119,7 @@ const Register = () => {
                                                         <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                                                             <LockClosedIcon className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
                                                         </span>
-                                                        Register Now
+                                                        Register
                                                     </button>
                                                 </div>
                                             </form>

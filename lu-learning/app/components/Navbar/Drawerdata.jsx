@@ -6,7 +6,6 @@ const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Courses', href: '#courses', current: false },
   { name: 'Mentor', href: '#mentor', current: false },
-  { name: 'Group', href: '#/', current: false },
   { name: 'Testimonial', href: '#testimonial', current: false },
 ]
 
@@ -37,7 +36,7 @@ const Data = () => {
             <button className="bg-[#d6efef] text-[#a5cbf0] w-full text-Blueviolet border border-semiblueviolet font-medium py-2 px-4 rounded">
               Register
             </button>
-            
+
           </div>
         </div>
       </div>
