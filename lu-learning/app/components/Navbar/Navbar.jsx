@@ -12,8 +12,8 @@ import Registerdialog from "./Registerdialog";
 const navigation = [
     { name: 'Home', href: '#/', current: true },
     { name: 'Courses', href: '#courses', current: false },
-    { name: 'Mentor', href: '#mentor', current: false },
-    { name: 'Testimonial', href: '#testimonial', current: false },
+    { name: 'Mentors', href: '#mentor', current: false },
+    { name: 'Testimonials', href: '#testimonial', current: false },
 ];
 
 function classNames(...classes) {
@@ -89,10 +89,6 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </div>
-
-                        {/* SIGNIN DIALOG */}
-
-                        <Signdialog />
 
 
                         {/* REGISTER DIALOG */}
