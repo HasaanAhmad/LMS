@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
-import Signdialog from "./Signdialog";
 import Registerdialog from "./Registerdialog";
 
 

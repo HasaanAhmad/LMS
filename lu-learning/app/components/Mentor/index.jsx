@@ -9,35 +9,26 @@ import Image from "next/image";
 
 const postData = [
     {
-        profession: 'Senior UX Designer',
-        name: 'Shoo Thar Mien',
-        imgSrc: '/assets/mentor/user3.png',
+        profession: 'CEO & Founder',
+        name: 'Muhammad Hamza Naeem',
+        imgSrc: '/assets/mentor/01.png',
     },
     {
-        profession: 'Senior UX Designer',
-        name: 'Shoo Thar Mien',
-        imgSrc: '/assets/mentor/user2.png',
+        profession: 'Sr. Graphic Designer',
+        name: 'Maira',
+        imgSrc: '/assets/mentor/02.png',
     },
     {
-        profession: 'Senior UX Designer',
-        name: 'Shoo Thar Mien',
-        imgSrc: '/assets/mentor/user1.png',
+        profession: 'Content Writing Expert',
+        name: 'Nageen Shawaiz',
+        imgSrc: '/assets/mentor/03.png',
     },
     {
-        profession: 'Senior UX Designer',
-        name: 'Shoo Thar Mien',
-        imgSrc: '/assets/mentor/user3.png',
+        profession: 'Wordpress Developer',
+        name: 'Saad Asghar',
+        imgSrc: '/assets/mentor/04.png',
     },
-    {
-        profession: 'Senior UX Designer',
-        name: 'Shoo Thar Mien',
-        imgSrc: '/assets/mentor/user2.png',
-    },
-    {
-        profession: 'Senior UX Designer',
-        name: 'Shoo Thar Mien',
-        imgSrc: '/assets/mentor/user1.png',
-    },
+
 ]
 
 // CAROUSEL SETTINGS
@@ -76,7 +67,7 @@ export default class MultipleItems extends Component {
             // centerMode: true,
             slidesToScroll: 1,
             arrows: false,
-            autoplay: false,
+            autoplay: true,
             speed: 4000,
             nextArrow: <SampleNextArrow className={undefined} style={undefined} onClick={undefined} />,
             prevArrow: <SamplePrevArrow className={undefined} style={undefined} onClick={undefined} />,
@@ -120,10 +111,10 @@ export default class MultipleItems extends Component {
                     <Slider {...settings}>
                         {postData.map((items, i) => (
                             <div key={i}>
-                                <div className='m-3 py-14 md:my-10 text-center'>
+                                <div className='m-3 py-10 md:my-10 text-center'>
                                     <div className="relative">
                                         <Image src={items.imgSrc} alt="user-image" width={306} height={0} className="inline-block m-auto" />
-                                        <div className="absolute right-[84px] bottom-[102px] bg-white rounded-full p-4">
+                                        <div className="absolute right-[84px] md:bottom-[102px] bottom-14  bg-white rounded-full p-4">
                                             <Image src={'/assets/mentor/linkedin.svg'} alt="linkedin-image" width={25} height={24} />
                                         </div>
                                     </div>

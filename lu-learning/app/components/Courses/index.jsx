@@ -72,7 +72,7 @@ const postData = [
 export default class MultipleItems extends Component {
     render() {
         const settings = {
-            dots: false,
+            dots: true,
             infinite: true,
             slidesToShow: 3,
             slidesToScroll: 2,
@@ -140,7 +140,7 @@ export default class MultipleItems extends Component {
                                                 </div>
                                             </div>
                                             <div>
-                                                <h3 className="text-3xl font-medium">${items.price}</h3>
+                                                <h3 className="text-3xl font-medium">Rs.{items.price}</h3>
                                             </div>
                                         </div>
 
