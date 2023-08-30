@@ -6,14 +6,9 @@ import Image from "next/image";
 
 // CAROUSEL DATA
 
-interface DataType {
-    profession: string;
-    comment: string;
-    imgSrc: string;
-    name: string;
-}
 
-const postData: DataType[] = [
+
+const postData = [
     {
         name: "Robert Fox",
         profession: 'CEO, Parkview Int.Ltd',

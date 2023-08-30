@@ -5,13 +5,9 @@ import Image from "next/image";
 
 // CAROUSEL DATA
 
-interface DataType {
-    profession: string;
-    name: string;
-    imgSrc: string;
-}
 
-const postData: DataType[] = [
+
+const postData = [
     {
         profession: 'Senior UX Designer',
         name: 'Shoo Thar Mien',
@@ -46,23 +42,23 @@ const postData: DataType[] = [
 
 // CAROUSEL SETTINGS
 
-function SampleNextArrow(props: { className: any; style: any; onClick: any; }) {
+function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
         <div
             className={className}
-            style={{ ...style, display: "flex", justifyContent: "center", position: 'absolute', alignItems: "center" , background: "#D5EFFA", padding: "28px", borderRadius: "30px", border: "1px solid #1A21BC" }}
+            style={{ ...style, display: "flex", justifyContent: "center", position: 'absolute', alignItems: "center", background: "#D5EFFA", padding: "28px", borderRadius: "30px", border: "1px solid #1A21BC" }}
             onClick={onClick}
         />
     );
 }
 
-function SamplePrevArrow(props: { className: any; style: any; onClick: any; }) {
+function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
         <div
             className={className}
-            style={{ ...style, display: "flex", justifyContent: "center", alignItems: "center" , background: "#D5EFFA", padding: "28px", borderRadius: "30px", border: "1px solid #1A21BC" }}
+            style={{ ...style, display: "flex", justifyContent: "center", alignItems: "center", background: "#D5EFFA", padding: "28px", borderRadius: "30px", border: "1px solid #1A21BC" }}
             onClick={onClick}
         />
     );
