@@ -1,13 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
-interface NavigationItem {
-  name: string;
-  href: string;
-  current: boolean;
-}
 
-const navigation: NavigationItem[] = [
+const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Courses', href: '#courses', current: false },
   { name: 'Mentor', href: '#mentor', current: false },
@@ -15,7 +10,7 @@ const navigation: NavigationItem[] = [
   { name: 'Testimonial', href: '#testimonial', current: false },
 ]
 
-function classNames(...classes: string[]) {
+function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 

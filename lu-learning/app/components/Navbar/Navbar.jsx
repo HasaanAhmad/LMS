@@ -7,13 +7,9 @@ import Drawerdata from "./Drawerdata";
 import Signdialog from "./Signdialog";
 import Registerdialog from "./Registerdialog";
 
-interface NavigationItem {
-    name: string;
-    href: string;
-    current: boolean;
-}
 
-const navigation: NavigationItem[] = [
+
+const navigation = [
     { name: 'Home', href: '#/', current: true },
     { name: 'Courses', href: '#courses', current: false },
     { name: 'Mentor', href: '#mentor', current: false },
@@ -21,11 +17,11 @@ const navigation: NavigationItem[] = [
     { name: 'Testimonial', href: '#testimonial', current: false },
 ];
 
-function classNames(...classes: string[]) {
+function classNames(...classes) {
     return classes.filter(Boolean).join(' ');
 }
 
-const CustomLink = ({ href, onClick, children }: { href: string; onClick: () => void; children: React.ReactNode }) => {
+const CustomLink = ({ href, onClick, children }) => {
     return (
         <Link href={href} passHref>
             <span
@@ -44,7 +40,7 @@ const Navbar = () => {
 
     const [currentLink, setCurrentLink] = useState('/');
 
-    const handleLinkClick = (href: string) => {
+    const handleLinkClick = (href) => {
         setCurrentLink(href);
     };
 
