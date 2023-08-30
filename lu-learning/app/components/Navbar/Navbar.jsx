@@ -13,7 +13,6 @@ const navigation = [
     { name: 'Home', href: '#/', current: true },
     { name: 'Courses', href: '#courses', current: false },
     { name: 'Mentor', href: '#mentor', current: false },
-    { name: 'Group', href: '/', current: false },
     { name: 'Testimonial', href: '#testimonial', current: false },
 ];
 
@@ -53,16 +52,16 @@ const Navbar = () => {
 
                             {/* LOGO */}
 
-                            <div className="flex flex-shrink-0 items-center">
+                            <div className="flex flex-shrink-0 items-center ">
                                 <img
-                                    className="block h-12 w-40 lg:hidden"
-                                    src={'/assets/logo/logo.svg'}
-                                    alt="dsign-logo"
+                                    className="block h-8 w-20 lg:hidden mt-2"
+                                    src={'/assets/logo/lu-logo.png'}
+                                    alt="design-logo"
                                 />
                                 <img
-                                    className="hidden h-full w-full lg:block"
-                                    src={'/assets/logo/logo.svg'}
-                                    alt="dsign-logo"
+                                    className="hidden h-12 w-40 lg:block mt-5"
+                                    src={'/assets/logo/lu-logo.png'}
+                                    alt="design-logo"
                                 />
                             </div>
 
