@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import Slider from "react-slick";
 import React, { Component } from "react";
 import { StarIcon } from '@heroicons/react/24/solid';
@@ -7,9 +7,9 @@ import Image from "next/image";
 
 const postData = [
     {
-        heading: 'Full stack modern',
-        heading2: 'javascript',
-        name: "Colt stelle",
+        heading: 'Freelancing Training',
+        heading2: 'Fiverr and Upwork Masterclass',
+        name: "LU Training and Development",
         imgSrc: '/assets/courses/courseone.png',
         students: 150,
         classes: 12,
@@ -18,9 +18,9 @@ const postData = [
     },
     ,
     {
-        heading: 'Design system',
-        heading2: 'with React programme',
-        name: "Colt stelle",
+        heading: 'Content Writing',
+        heading2: 'SEO Optimized Writing',
+        name: "LU Training and Development",
         imgSrc: '/assets/courses/coursetwo.png',
         students: 130,
         classes: 12,
@@ -28,9 +28,9 @@ const postData = [
         rating: 4.7,
     },
     {
-        heading: 'Design banner',
-        heading2: 'with Figma',
-        name: "Colt stelle",
+        heading: 'Canva Designing',
+        heading2: 'with Canva Pro',
+        name: "LU Training and Development",
         imgSrc: '/assets/courses/coursethree.png',
         students: 120,
         classes: 12,
@@ -38,9 +38,9 @@ const postData = [
         rating: 4.7,
     },
     {
-        heading: 'We Launch Delia',
-        heading2: 'Webflow this Week!',
-        name: "Colt stelle",
+        heading: 'Wordpress Development',
+        heading2: 'From Zero to Hero',
+        name: "LU Training and Development",
         imgSrc: '/assets/courses/courseone.png',
         students: 150,
         classes: 12,
@@ -48,9 +48,9 @@ const postData = [
         rating: 4.7,
     },
     {
-        heading: 'We Launch Delia',
-        heading2: 'Webflow this Week!',
-        name: "Colt stelle",
+        heading: 'Search Engine Optimization',
+        heading2: 'Content and Onpage SEO!',
+        name: "LU Training and Development",
         imgSrc: '/assets/courses/coursetwo.png',
         students: 150,
         classes: 12,
@@ -58,9 +58,9 @@ const postData = [
         rating: 4.7,
     },
     {
-        heading: 'We Launch Delia',
-        heading2: 'Webflow this Week!',
-        name: "Colt stelle",
+        heading: 'Spoken English',
+        heading2: 'Learn English as a language',
+        name: "LU Training and Development",
         imgSrc: '/assets/courses/coursethree.png',
         students: 150,
         classes: 12,
@@ -119,7 +119,7 @@ export default class MultipleItems extends Component {
                                         <div className="absolute right-5 -bottom-2 bg-ultramarine rounded-full p-6">
                                             <h3 className="text-white uppercase text-center text-sm font-medium">best <br /> seller</h3>
                                         </div>
-                                    </div>                                    
+                                    </div>
                                     <div className="px-3">
                                         <h4 className='text-2xl font-bold pt-6 text-black'>{items.heading}</h4>
                                         <h4 className='text-2xl font-bold pt-1 text-black'>{items.heading2}</h4>
