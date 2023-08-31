@@ -6,6 +6,11 @@ const Page = () => {
   const [selectedCourses, setSelectedCourses] = useState([]);
   const [courses, setCourses] = useState([]);
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [gender, setGender] = useState('');
+  const [name, setName] = useState('');
+  const [age, setAge] = useState('');
+  const [email, setEmail] = useState('');
+  const [whatsapp, setWhatsapp] = useState('');
 
   useEffect(() => {
     setCourses(regData);
@@ -34,22 +39,39 @@ const Page = () => {
       <div className="px-10 py-10 w-full sm:w-3/4 md:w-1/2 lg:w-2/3 xl:w-1/2 bg-white rounded-lg shadow-md">
         <h1 className="text-3xl font-semibold mb-6 text-center text-white bg-blue-300 py-5">Registration</h1>
         <form onSubmit={handleSubmit}>
-          {/* Other form fields */}
           <div className="mb-4">
             <label className="block mb-2 text-sm font-bold text-gray-700">
               Name
             </label>
             <input
               type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
             />
           </div>
           <div className="mb-4">
             <label className="block mb-2 text-sm font-bold text-gray-700">
-              Father's Name
+              Gender
+            </label>
+            <select
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
+              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+            >
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div className="mb-4">
+            <label className="block mb-2 text-sm font-bold text-gray-700">
+              Age
             </label>
             <input
-              type="text"
+              type="number"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
               className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
             />
           </div>
@@ -59,10 +81,22 @@ const Page = () => {
             </label>
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
             />
           </div>
-          {/* ... Other form fields ... */}
+          <div className="mb-4">
+            <label className="block mb-2 text-sm font-bold text-gray-700">
+              Whatsapp number
+            </label>
+            <input
+              type="tel"
+              value={whatsapp}
+              onChange={(e) => setWhatsapp(e.target.value)}
+              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+            />
+          </div>
 
           {/* Course Selection */}
           <div className="bg-white rounded-lg p-6 mb-4">
