@@ -16,7 +16,8 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        hand: [ 'Caveat', 'cursive'],
+        hand: ['Caveat', 'cursive'],
+
       },
     },
   },
