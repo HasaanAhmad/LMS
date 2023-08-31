@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -91,22 +92,23 @@ hr {
 
 .slick-dots li.slick-active button:before {
     opacity: 1;
-    color: #1A21BC!important;
+    color: #1A21BC !important;
 }
 
 .slick-dots li button:before {
-    font-size: 11px!important;
+    font-size: 11px !important;
 }
 
 .slick-prev {
-    left: 69rem!important;
+    left: 69rem !important;
 }
 
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
     font-size: 0;
     line-height: 0;
     position: absolute;
-    top: -14%!important;
+    top: -14% !important;
     display: block;
     width: 20px;
     height: 20px;
@@ -149,7 +151,7 @@ hr {
 }
 
 .middleDiv {
-    box-shadow: 5.54348px 38.8043px 110.87px rgba(89, 104, 118, 0.15)!important;
+    box-shadow: 5.54348px 38.8043px 110.87px rgba(89, 104, 118, 0.15) !important;
     border-radius: 22.1739px;
     transform: scale(1.05);
 }
