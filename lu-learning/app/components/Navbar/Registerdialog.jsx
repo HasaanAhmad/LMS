@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation'
 const Register = () => {
     const router = useRouter()
     const handleRegister = () => {
-        router.push('/Registration')
+        router.push('/Register')
     }
 
     return (
