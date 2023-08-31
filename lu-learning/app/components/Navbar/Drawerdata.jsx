@@ -1,5 +1,7 @@
+'use client'
 import React from "react";
 import Link from "next/link";
+import {useRouter} from "next/navigation";
 
 
 const navigation = [
@@ -13,7 +15,12 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+
 const Data = () => {
+  const router = useRouter()
+  const handleRegister = () => {
+    router.push('/Registration')
+  }
   return (
     <div className="rounded-md max-w-sm w-full mx-auto">
       <div className="flex-1 space-y-4 py-1">
@@ -33,7 +40,7 @@ const Data = () => {
               </Link>
             ))}
             <div className="mt-4"></div>
-            <button className="bg-[#d6efef] text-[#a5cbf0] w-full text-Blueviolet border border-semiblueviolet font-medium py-2 px-4 rounded">
+            <button className="bg-[#d6efef] text-[#a5cbf0] w-full text-Blueviolet border border-semiblueviolet font-medium py-2 px-4 rounded" onClick={handleRegister}>
               Register
             </button>
 
