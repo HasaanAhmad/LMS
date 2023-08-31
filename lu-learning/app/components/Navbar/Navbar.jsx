@@ -13,7 +13,7 @@ const navigation = [
     { name: 'Courses', href: '#courses', current: false },
     { name: 'Mentors', href: '#mentor', current: false },
     { name: 'Testimonials', href: '#testimonial', current: false },
-    { name: 'About Us', href: '#aboutus', current: false},
+    { name: 'About Us', href: '#aboutus', current: false },
 
 ];
 

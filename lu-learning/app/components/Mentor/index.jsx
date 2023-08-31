@@ -28,6 +28,11 @@ const postData = [
         name: 'Saad Asghar',
         imgSrc: '/assets/mentor/04.png',
     },
+    {
+        profession: 'Spoken English Expert',
+        name: 'Afia kazmi',
+        imgSrc: '/assets/mentor/05.png',
+    },
 
 ]
 
@@ -61,14 +66,14 @@ export default class MultipleItems extends Component {
 
     render() {
         const settings = {
-            dots: false,
+            dots: true,
             infinite: true,
             slidesToShow: 3,
             // centerMode: true,
             slidesToScroll: 1,
             arrows: false,
             autoplay: true,
-            speed: 4000,
+            speed: 400,
             nextArrow: <SampleNextArrow className={undefined} style={undefined} onClick={undefined} />,
             prevArrow: <SamplePrevArrow className={undefined} style={undefined} onClick={undefined} />,
             autoplaySpeed: 4500,

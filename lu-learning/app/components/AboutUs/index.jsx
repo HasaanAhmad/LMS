@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import { BsFilePdf } from "react-icons/bs";
@@ -33,33 +34,33 @@ const index = () => {
               and how we get it done.
             </p>
           </div>
-        
+
         </div>
         <div className="ml-10 flex justify-center items-center mt-10 flex-col">
-            <h3 className="text-xl font-semibold mb-2">Certificates</h3>
-            <ul>
-              <li className="flex items-center text-gray-600">
-                <BsFilePdf className="mr-2" />
-                <a
-                  href="/path/to/tax-certificate.pdf"
-                  download="tax-certificate.pdf"
-                  className="hover:underline"
-                >
-                  Tax Certificate
-                </a>
-              </li>
-              <li className="flex items-center text-gray-600">
-                <BsFilePdf className="mr-2" />
-                <a
-                  href="/path/to/incorporation-certificate.pdf"
-                  download="incorporation-certificate.pdf"
-                  className="hover:underline"
-                >
-                  Incorporation Certificate
-                </a>
-              </li>
-            </ul>
-          </div>
+          <h3 className="text-xl font-semibold mb-2">Certificates</h3>
+          <ul>
+            <li className="flex items-center text-gray-600">
+              <BsFilePdf className="mr-2" />
+              <a
+                href="/path/to/tax-certificate.pdf"
+                download="tax-certificate.pdf"
+                className="hover:underline"
+              >
+                Tax Certificate
+              </a>
+            </li>
+            <li className="flex items-center text-gray-600">
+              <BsFilePdf className="mr-2" />
+              <a
+                href="/path/to/incorporation-certificate.pdf"
+                download="incorporation-certificate.pdf"
+                className="hover:underline"
+              >
+                Incorporation Certificate
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   );

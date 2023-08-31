@@ -11,6 +11,7 @@ const postData = [
         heading2: 'Fiverr and Upwork Masterclass',
         name: "LU Training and Development",
         imgSrc: '/assets/courses/courseone.png',
+        li: 'freelancing-training',
         students: 150,
         classes: 12,
         price: 20,
@@ -22,6 +23,7 @@ const postData = [
         heading2: 'SEO Optimized Writing',
         name: "LU Training and Development",
         imgSrc: '/assets/courses/coursetwo.png',
+        li: 'content-writing',
         students: 130,
         classes: 12,
         price: 20,
@@ -32,6 +34,7 @@ const postData = [
         heading2: 'with Canva Pro',
         name: "LU Training and Development",
         imgSrc: '/assets/courses/coursethree.png',
+        li: 'canva-designing',
         students: 120,
         classes: 12,
         price: 20,
@@ -42,6 +45,7 @@ const postData = [
         heading2: 'From Zero to Hero',
         name: "LU Training and Development",
         imgSrc: '/assets/courses/courseone.png',
+        li: 'wordpress-development',
         students: 150,
         classes: 12,
         price: 20,
@@ -52,6 +56,7 @@ const postData = [
         heading2: 'Content and Onpage SEO!',
         name: "LU Training and Development",
         imgSrc: '/assets/courses/coursetwo.png',
+        li: 'search-engine-optimization',
         students: 150,
         classes: 12,
         price: 20,
@@ -62,6 +67,18 @@ const postData = [
         heading2: 'Learn English as a language',
         name: "LU Training and Development",
         imgSrc: '/assets/courses/coursethree.png',
+        li: 'spoken-english',
+        students: 150,
+        classes: 12,
+        price: 20,
+        rating: 4.7,
+    },
+    {
+        heading: 'Discounted Bundles',
+        heading2: 'Avail Discounted Bundles',
+        name: "LU Training and Development",
+        imgSrc: '/assets/courses/coursethree.png',
+        li: 'discounted-bundles',
         students: 150,
         classes: 12,
         price: 20,
@@ -121,8 +138,11 @@ export default class MultipleItems extends Component {
                                         </div>
                                     </div>
                                     <div className="px-3">
-                                        <h4 className='text-2xl font-bold pt-6 text-black'>{items.heading}</h4>
-                                        <h4 className='text-2xl font-bold pt-1 text-black'>{items.heading2}</h4>
+                                        <Link href={`/${items.li}`}>
+
+                                            <h4 className='text-2xl font-bold pt-6 text-black'>{items.heading}</h4>
+                                            <h4 className='text-2xl font-bold pt-1 text-black'>{items.heading2}</h4>
+                                        </Link>
 
                                         <div>
                                             <h3 className='text-base font-normal pt-6 opacity-75'>{items.name}</h3>
