@@ -6,11 +6,6 @@ import { BsFilePdf } from "react-icons/bs";
 const index = () => {
   return (
     <section className="bg-gray-100 py-16 " id="aboutus">
-      <style>
-        {`
-          @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
-        `}
-      </style>
       <div className="container mx-auto">
         <div className="flex flex-col items-center">
           <h2 className="text-3xl font-semibold mb-4">About Us</h2>
@@ -21,8 +16,7 @@ const index = () => {
         <div className="flex items-center justify-center">
           <div className="bg-[#71cbc9] p-6 rounded-lg text-center">
             <h3
-              className="text-white lg:text-9xl font-semibold mb-2 sm:text-lg"
-              style={{ fontFamily: "Caveat, cursive" }}
+              className="text-white font-hand lg:text-9xl font-semibold mb-2 sm:text-lg"
             >
               Mission
             </h3>

@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import { StarIcon } from "@heroicons/react/24/solid";
@@ -35,14 +36,14 @@ const Banner = () => {
                   students
                 </h3>
                 <div className="flex flex-col">
-                <h3 className="text-22xl text-center font-medium">4.7</h3>
-                <div className="flex text-[#3B8383]">
-                  <StarIcon className="h-5 w-5 text-gold" />
-                  <StarIcon className="h-5 w-5 text-gold" />
-                  <StarIcon className="h-5 w-5 text-gold" />
-                  <StarIcon className="h-5 w-5 text-gold" />
-                  <StarIcon className="h-5 w-5 text-gold" />
-                </div>
+                  <h3 className="text-22xl text-center font-medium">4.7</h3>
+                  <div className="flex text-[#3B8383]">
+                    <StarIcon className="h-5 w-5 text-gold" />
+                    <StarIcon className="h-5 w-5 text-gold" />
+                    <StarIcon className="h-5 w-5 text-gold" />
+                    <StarIcon className="h-5 w-5 text-gold" />
+                    <StarIcon className="h-5 w-5 text-gold" />
+                  </div>
                 </div>
               </div>
             </div>
