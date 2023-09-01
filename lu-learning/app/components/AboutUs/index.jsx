@@ -1,63 +1,43 @@
-"use client"
 import React from "react";
 import Image from "next/image";
-import { BsFilePdf } from "react-icons/bs";
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
-const index = () => {
+const Index = () => {
   return (
-    <section className="bg-gray-100 py-16 " id="aboutus">
+    <section className="bg-gray-100 py-16" id="aboutus">
       <div className="container mx-auto">
         <div className="flex flex-col items-center">
-          <h2 className="text-3xl font-semibold mb-4">About Us</h2>
-          <p className="text-gray-600 text-lg text-center max-w-md mb-8">
-            Our mission statement.
-          </p>
+          <h2 className="text-4xl sm:text-6xl font-semibold mb-4 text-center">Want to know more about us?</h2>
         </div>
-        <div className="flex items-center justify-center">
-          <div className="bg-[#71cbc9] p-6 rounded-lg text-center">
-            <h3
-              className="text-white font-hand lg:text-9xl font-semibold mb-2 sm:text-lg"
-            >
-              Mission
-            </h3>
-            <p className="text-white lg:w-96 w-80">
-              LU is providing people with flexible and rigorous online learning
-              opportunities that will help them acquire the knowledge, skills,
-              and characteristics necessary for career readiness. LU is on a
-              mission to help creators earn a living online. Here is what we do
-              and how we get it done.
-            </p>
-          </div>
+      </div>
 
+      <div className="container mx-auto px-4 text-center">
+        <p className="text-gray-600 mb-4 text-lg sm:text-2xl">
+          LU is providing people with flexible and rigorous online learning opportunities that will help them acquire the knowledge, skills, and characteristics necessary for career readiness. LU is on a mission to help creators earn a living online. Here is what we do and how we get it done.
+        </p>
+        <div className="flex justify-center space-x-3">
+          <a href="#" className="text-gray-600 hover:text-blue-500">
+            <FaFacebook size={30} />
+          </a>
+          <a href="#" className="text-gray-600 hover:text-blue-600">
+            <FaTwitter size={30} />
+          </a>
+          <a href="#" className="text-gray-600 hover:text-pink-500">
+            <FaInstagram size={30} />
+          </a>
         </div>
-        <div className="ml-10 flex justify-center items-center mt-10 flex-col">
-          <h3 className="text-xl font-semibold mb-2">Certificates</h3>
-          <ul>
-            <li className="flex items-center text-gray-600">
-              <BsFilePdf className="mr-2" />
-              <a
-                href="/path/to/tax-certificate.pdf"
-                download="tax-certificate.pdf"
-                className="hover:underline"
-              >
-                Tax Certificate
-              </a>
-            </li>
-            <li className="flex items-center text-gray-600">
-              <BsFilePdf className="mr-2" />
-              <a
-                href="/path/to/incorporation-certificate.pdf"
-                download="incorporation-certificate.pdf"
-                className="hover:underline"
-              >
-                Incorporation Certificate
-              </a>
-            </li>
-          </ul>
+        <div className="mt-6">
+          <h3 className="text-xl sm:text-lg font-semibold">Contact Us</h3>
+          <p className="text-gray-600">
+            Email: info@example.com
+          </p>
+          <p className="text-gray-600">
+            Phone: +1234567890
+          </p>
         </div>
       </div>
     </section>
   );
 };
 
-export default index;
+export default Index;
