@@ -1,7 +1,8 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import regData from '../datasets/regData';
-
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 const Page = () => {
   const [selectedCourses, setSelectedCourses] = useState([]);
   const [courses, setCourses] = useState([]);
@@ -11,6 +12,7 @@ const Page = () => {
   const [age, setAge] = useState('');
   const [email, setEmail] = useState('');
   const [whatsapp, setWhatsapp] = useState('');
+  const router = useRouter()
 
   useEffect(() => {
     setCourses(regData);
@@ -21,17 +23,25 @@ const Page = () => {
   };
 
   const handleCourseSelection = (course) => {
+    event.preventDefault();
     if (selectedCourses.includes(course.heading)) {
       setSelectedCourses(selectedCourses.filter(selected => selected !== course.heading));
     } else {
       setSelectedCourses([...selectedCourses, course.heading]);
     }
   };
-
+ 
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent form submission and page refresh
-    // Add your logic to handle form submission here
-    // You can use selectedCourses and other form data
+    event.preventDefault(); 
+    const selectedCoursePrices = courses
+  .filter(course => selectedCourses.includes(course.heading))
+  .map(course => course.price);
+
+  const totalSum = selectedCoursePrices.reduce((sum, price) => sum + price, 0);
+  console.log(totalSum)
+  sessionStorage.setItem("totalCost", totalSum);
+  router.push('/successPage')
+
   };
 
   return (
@@ -139,7 +149,7 @@ const Page = () => {
                             onChange={() => handleCourseSelection(course)}
                             className="w-4 h-4 text-blue-600"
                           />
-                          <span>{course.heading} - {course.price}</span>
+                          <span>{course.heading} - {course.price} Rs.</span>
                         </label>
                       </li>
                     ))}
@@ -151,10 +161,12 @@ const Page = () => {
           {/* Submit Button */}
           <div className="flex justify-center">
             <button
-              type="submit"
+              type="button"
               className="mt-4 bg-blue-500 text-white px-3 py-2 rounded-md hover:bg-blue-600"
+              onClick={handleSubmit}
             >
-              Submit Registration
+              Submit
+              
             </button>
           </div>
         </form>

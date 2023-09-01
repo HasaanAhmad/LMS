@@ -19,7 +19,7 @@ function classNames(...classes) {
 const Data = () => {
   const router = useRouter()
   const handleRegister = () => {
-    router.push('/Register')
+    router.push('/register2')
   }
   return (
     <div className="rounded-md max-w-sm w-full mx-auto">

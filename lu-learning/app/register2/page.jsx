@@ -3,16 +3,22 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import regData from '../datasets/regData';
+import emailjs from 'emailjs-com';
+
 
 const page = () => {
     const [formData, setFormData] = useState({
-        selectedCourse: '',
+       
         name: '',
-        gender: '',
-        age: '',
         email: '',
+        age: '',
+        gender: '',
         whatsapp: '',
+        selectedCourse: '',
     });
+const SERVICE_ID = 'service_chaa5kr';
+const TEMPLATE_ID = 'template_ra7336r';
+const USER_ID = 'SdK9pCZiQdegunOji';
     const [courses, setCourses] = useState([]);
     const [submitDisabled, setSubmitDisabled] = useState(true);
 
@@ -36,10 +42,23 @@ const page = () => {
         setFormData({ ...formData, [field]: value });
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log(formData);
+    
+        const form = document.getElementById('registrationForm');
+        const gender = formData.gender
+        const selectedCourse = formData.selectedCourse
+        console.log("Selected Gender is", gender);
+        console.log("Selected Course is", selectedCourse);
+        try {
+            const response = await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, USER_ID, formData);
+            console.log('Email sent successfully!', response,form);
+            
+        } catch (error) {
+            console.error('Error sending email:', error);
+        }
     };
+    
     return (
         <div id="reg" className="bg-lightkblue" style={{ background: "linear-gradient(to bottom, #DCDDEc, #C3E1FD)" }}>
             <div className="mx-auto max-w-7xl pt-20 sm:pb-24 px-6">
@@ -51,6 +70,7 @@ const page = () => {
                         <h3 className="text-charcoal text-lg font-normal text-center lg:text-start opacity-75 pt-2 lg:pt-0">
                             Build skills with our courses and mentors from world-class companies.
                         </h3>
+                        <form id="registrationForm" onSubmit={handleSubmit}>
                         <div className="flex flex-col space-y-4">
                             <div className="flex space-x-4">
                                 <div className="w-1/2">
@@ -61,6 +81,7 @@ const page = () => {
                                         type="text"
                                         id="name"
                                         placeholder="Enter your name"
+                                        name="name"
                                         value={formData.name}
                                         onChange={(e) => handleInputChange('name', e.target.value)}
                                         className="w-full px-3 py-3 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
@@ -74,6 +95,7 @@ const page = () => {
                                     <input
                                         type="email"
                                         id="email"
+                                        name="email"
                                         placeholder="Enter your email"
                                         value={formData.email}
                                         onChange={(e) => handleInputChange('email', e.target.value)}
@@ -90,6 +112,7 @@ const page = () => {
                                     <input
                                         type="number"
                                         id="age"
+                                        name="age"
                                         placeholder="Enter your age"
                                         value={formData.age}
                                         onChange={(e) => handleInputChange('age', e.target.value)}
@@ -104,6 +127,7 @@ const page = () => {
                                     <select
                                         id="gender"
                                         value={formData.gender}
+                                        name="gender"
                                         onChange={(e) => handleInputChange('gender', e.target.value)}
                                         className="w-full px-3 py-3 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                                         required
@@ -123,6 +147,7 @@ const page = () => {
                                         type="tel"
                                         id="whatsapp"
                                         placeholder="Enter your contact number"
+                                        name="whatsapp"
                                         value={formData.whatsapp}
                                         onChange={(e) => handleInputChange('whatsapp', e.target.value)}
                                         className="w-full px-3 py-3 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
@@ -139,6 +164,8 @@ const page = () => {
                                         onChange={(e) => handleInputChange('selectedCourse', e.target.value)}
                                         className="w-full px-3 py-3 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                                         required
+                                        name="selectedCourse"
+
                                     >
                                         <option value="">Select a Course</option>
                                         {courses.map((course, index) => (
@@ -152,6 +179,7 @@ const page = () => {
                             <div className="flex justify-center">
                                 <button
                                     type="submit"
+                                    onClick={handleSubmit}
                                     className={`mt-4 bg-green-500 text-white px-6 py-3 rounded-md hover:bg-green-700 ${submitDisabled ? 'opacity-50 px-6 py-3 bg-green-500 cursor-not-allowed' : ''}`}
                                     disabled={submitDisabled}
                                 >
@@ -159,7 +187,7 @@ const page = () => {
                                 </button>
                             </div>
                         </div>
-
+                        </form>
 
                         <div className="flex items-center justify-between pt-10 lg:pt-4">
                             <div className="flex gap-2">
