@@ -4,17 +4,17 @@ import Image from "next/image";
 const socialLinks = [
     {
         imgSrc: '/assets/footer/facebook.svg',
-        link: 'www.facebook.com',
+        link: 'https://www.facebook.com/lutrainingsmcpvtltd?mibextid=LQQJ4d',
         width: 10
     },
     {
         imgSrc: '/assets/footer/insta.svg',
-        link: 'www.instagram.com',
+        link: 'https://www.instagram.com/lu_training_smc_pvt_ltd',
         width: 14
     },
     {
-        imgSrc: '/assets/footer/twitter.svg',
-        link: 'www.twitter.com',
+        imgSrc: '/assets/footer/whatsapp.svg',
+        link: 'https://wa.me/923457031753',
         width: 14
     },
 ];

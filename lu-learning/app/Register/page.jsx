@@ -4,9 +4,11 @@ import React, { useState, useEffect } from "react";
 import { FaFacebook, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import regData from '../datasets/regData';
 import emailjs from 'emailjs-com';
+import { useRouter } from 'next/navigation';
 
 
 const page = () => {
+    const router = useRouter();
     const [formData, setFormData] = useState({
 
         name: '',
@@ -57,6 +59,7 @@ const page = () => {
         } catch (error) {
             console.error('Error sending email:', error);
         }
+        router.push('/successPage')
     };
 
     return (
