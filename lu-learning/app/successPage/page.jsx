@@ -30,7 +30,7 @@ const RegistrationSuccessfulPage = () => {
       <li>Bank Name: <strong>[Meezan Bank- Kot Addu, Multan]</strong></li>
       <li>Account Name: <strong>[MUHAMMAD HAMZA NAEEM (ASAAN AC)]</strong></li>
       <li>Account Number: <strong>[95010105236209]</strong></li>
-      <li>IBAN: <strong>[Your IBAN]</strong></li>
+      <li>IBAN: <strong>[PK67MEZN0095010105236209]</strong></li>
     </ul>
   </ul>
 </div>
