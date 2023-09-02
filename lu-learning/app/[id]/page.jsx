@@ -3,13 +3,20 @@ import React from 'react'
 import { FaStar, FaMoneyBill } from 'react-icons/fa';
 import Image from 'next/image';
 import courseData from "@/app/datasets/courseData"
+import { useRouter, useParams } from 'next/navigation';
 
-import { useParams } from 'next/navigation'
 
 const page = () => {
+
     const Params = useParams();
     const { id } = Params;
     let course;
+    const router = useRouter();
+
+    const handleEnroll = () => {
+        router.push('/register')
+    }
+
 
 
 
@@ -34,13 +41,16 @@ const page = () => {
                     <Image className="h-full w-full object-cover " width={500} height={500} src={course.banner} alt="Course" />
                 </div>
                 <div className="p-8">
-                    <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{course.heading}</div>
-                    <p className="mt-2 text-gray-500">
-                        {course.desc}
-                    </p>
-                    <p className="mt-2 text-gray-500">
-                        {course.desc2}
-                    </p>
+                    <div className="uppercase tracking-wide text-xl font-bold text-indigo-500 font-semibold">{course.heading}</div>
+                    <div className='h-50'>
+
+                        <p className="mt-2 text-gray-500">
+                            {course.desc}
+                        </p>
+                        <p className="mt-2 text-gray-500">
+                            {course.desc2}
+                        </p>
+                    </div>
                     <div className="mt-2">
                         <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
                             <FaStar className="inline-block mr-1 text-yellow-500" />
@@ -49,12 +59,30 @@ const page = () => {
                     </div>
                     <div className="mt-2">
                         <div className="flex items-center">
-                            <FaMoneyBill className="inline-block mr-1 text-green-500" />
-                            <span className="text-xl text-gray-900 font-semibold">Rs.{course.price}</span>
+                            {course.originalPrice ? (
+                                <>
+                                    <div className="text-xl font-semibold text-gray-500 line-through mr-2">
+                                        Rs.{course.originalPrice}
+                                    </div>
+                                    <div className="text-5xl text-red-500 font-semibold">
+                                        Rs.{course.price}
+                                    </div>
+                                </>
+                            ) : (
+                                <>
+                                    <div className="text-xl font-semibold text-gray-500 line-through mr-2">
+                                        Rs.1500
+                                    </div>
+                                    <div className="text-5xl text-red-500 font-semibold">
+                                        Rs.1000
+                                    </div>
+                                </>
+                            )}
+
                         </div>
                     </div>
                     <div className="mt-4">
-                        <button className="px-10 py-4 bg-indigo-500 text-white font-semibold rounded-lg hover:bg-indigo-600 focus:outline-none focus:shadow-outline">
+                        <button onClick={handleEnroll} className="px-10 py-4 bg-indigo-500 text-white font-semibold rounded-lg hover:bg-indigo-600 focus:outline-none focus:shadow-outline">
                             Enroll Now
                         </button>
 

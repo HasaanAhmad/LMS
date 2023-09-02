@@ -4,87 +4,8 @@ import React, { Component } from "react";
 import { StarIcon } from '@heroicons/react/24/solid';
 import Link from "next/link";
 import Image from "next/image";
+import courseData from "@/app/datasets/courseData";
 
-const postData = [
-    {
-        heading: 'Freelancing Training',
-        heading2: 'Fiverr and Upwork Masterclass',
-        name: "LU Training and Development",
-        imgSrc: '/assets/courses/courseone.png',
-        li: 'freelancing-training',
-        students: 150,
-        classes: 12,
-        price: 20,
-        rating: 4.7,
-    },
-    ,
-    {
-        heading: 'Content Writing',
-        heading2: 'SEO Optimized Writing',
-        name: "LU Training and Development",
-        imgSrc: '/assets/courses/coursetwo.png',
-        li: 'content-writing',
-        students: 130,
-        classes: 12,
-        price: 20,
-        rating: 4.7,
-    },
-    {
-        heading: 'Canva Designing',
-        heading2: 'with Canva Pro',
-        name: "LU Training and Development",
-        imgSrc: '/assets/courses/coursethree.png',
-        li: 'canva-designing',
-        students: 120,
-        classes: 12,
-        price: 20,
-        rating: 4.7,
-    },
-    {
-        heading: 'Wordpress Development',
-        heading2: 'From Zero to Hero',
-        name: "LU Training and Development",
-        imgSrc: '/assets/courses/courseone.png',
-        li: 'wordpress-development',
-        students: 150,
-        classes: 12,
-        price: 20,
-        rating: 4.7,
-    },
-    {
-        heading: 'Search Engine Optimization',
-        heading2: 'Content and Onpage SEO!',
-        name: "LU Training and Development",
-        imgSrc: '/assets/courses/coursetwo.png',
-        li: 'search-engine-optimization',
-        students: 150,
-        classes: 12,
-        price: 20,
-        rating: 4.7,
-    },
-    {
-        heading: 'Spoken English',
-        heading2: 'Learn English as a language',
-        name: "LU Training and Development",
-        imgSrc: '/assets/courses/coursethree.png',
-        li: 'spoken-english',
-        students: 150,
-        classes: 12,
-        price: 20,
-        rating: 4.7,
-    },
-    {
-        heading: 'Discounted Bundles',
-        heading2: 'Avail Discounted Bundles',
-        name: "LU Training and Development",
-        imgSrc: '/assets/courses/coursethree.png',
-        li: 'discounted-bundles',
-        students: 150,
-        classes: 12,
-        price: 20,
-        rating: 4.7,
-    },
-];
 
 export default class MultipleItems extends Component {
     render() {
@@ -128,7 +49,7 @@ export default class MultipleItems extends Component {
                     </div>
 
                     <Slider {...settings}>
-                        {postData.map((items, i) => (
+                        {courseData.map((items, i) => (
                             <div key={i}>
                                 <div className='bg-white m-3 px-3 pt-3 pb-12 my-20 shadow-courses rounded-2xl'>
                                     <div className="relative rounded-3xl">

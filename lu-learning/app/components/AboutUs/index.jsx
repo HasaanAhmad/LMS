@@ -1,10 +1,18 @@
+"use client"
 import React from "react";
 import Image from "next/image";
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import { useRouter } from "next/navigation";
 
 const Index = () => {
+  const router = useRouter()
+  const handleClick = () => {
+    router.push('/register')
+  }
   return (
-    <section className="bg-gray-100 py-16" id="aboutus">
+
+    <section className="mx-auto max-w-7xl bg-gray-100 py-16" id="aboutus">
+
       <div className="container mx-auto">
         <div className="flex flex-col items-center">
           <h2 className="text-4xl sm:text-6xl font-semibold mb-4 text-center">Want to know more about us?</h2>
@@ -12,27 +20,32 @@ const Index = () => {
       </div>
 
       <div className="container mx-auto px-4 text-center">
+        <Image src="/assets/about/help.png" width={500} height={500} className="rounded-full mx-auto" />
         <p className="text-gray-600 mb-4 text-lg sm:text-2xl">
-          LU is providing people with flexible and rigorous online learning opportunities that will help them acquire the knowledge, skills, and characteristics necessary for career readiness. LU is on a mission to help creators earn a living online. Here is what we do and how we get it done.
+          We are providing the best courses in cheapest price possible in Pakistan. No one can beat us in term of quality and price. Industry level mentors guide you to the level of expertise you want to achieve.
         </p>
-        <div className="flex justify-center space-x-3">
-          <a href="#" className="text-gray-600 hover:text-blue-500">
-            <FaFacebook size={30} />
+        <div className="flex justify-center space-x-3 mb-6">
+          <a href="https://www.facebook.com/lutrainingsmcpvtltd?mibextid=LQQJ4d" target="_blank" className="text-gray-600 hover:text-blue-500">
+            <FaFacebook size={50} />
           </a>
-          <a href="#" className="text-gray-600 hover:text-blue-600">
-            <FaTwitter size={30} />
+
+          <a href="https://www.instagram.com/lu_training_smc_pvt_ltd" target="_blank" className="text-gray-600 hover:text-pink-500">
+            <FaInstagram size={50} />
           </a>
-          <a href="#" className="text-gray-600 hover:text-pink-500">
-            <FaInstagram size={30} />
+          <a href="https://wa.me/923457031753" target="_blank" className="text-gray-600 hover:text-green-500">
+            <FaWhatsapp size={50} />
           </a>
         </div>
+        <button className="text-Blueviolet border-2 text-lg font-medium ml-9 py-5 px-16 transition duration-150 ease-in-out rounded-md bg-semiblueviolet hover:text-white hover:bg-[#666AA9] " onClick={handleClick}>
+          Learn More
+        </button>
         <div className="mt-6">
           <h3 className="text-xl sm:text-lg font-semibold">Contact Us</h3>
           <p className="text-gray-600">
-            Email: info@example.com
+            Email: lutrainingpvtltd@gmail.com
           </p>
           <p className="text-gray-600">
-            Phone: +1234567890
+            Phone: +923457031753
           </p>
         </div>
       </div>

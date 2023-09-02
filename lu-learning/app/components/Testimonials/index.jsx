@@ -10,40 +10,40 @@ import Image from "next/image";
 
 const postData = [
     {
-        name: "Robert Fox",
-        profession: 'CEO, Parkview Int.Ltd',
-        comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-        imgSrc: '/assets/testimonial/user.svg',
+        name: "tba_9410",
+        profession: 'Ex Graphic Designing Student',
+        comment: 'it was amazing. I have learn a lot about graphic designing. Dr. Maria Ishaq gave usamazing lectures and taught us well. Than you so much Dr Maria....',
+        imgSrc: '/assets/testimonial/female.png',
     },
     {
-        name: "Leslie Alexander",
-        profession: 'CEO, Parkview Int.Ltd',
-        comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-        imgSrc: '/assets/mentor/user2.png',
+        name: "Anamata_n55",
+        profession: 'Ex Graphic Designing Student',
+        comment: 'First class and last with Dr Maira Ishaq. It was amazing. Platform of learning...',
+        imgSrc: '/assets/testimonial/female.png',
     },
     {
-        name: "Cody Fisher",
-        profession: 'CEO, Parkview Int.Ltd',
-        comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-        imgSrc: '/assets/mentor/user3.png',
+        name: "mahamazib",
+        profession: 'Ex Canva Student',
+        comment: 'Classes with Sir Hamza are amazing. Best platform to learn...',
+        imgSrc: '/assets/testimonial/female.png',
     },
     {
-        name: "Robert Fox",
-        profession: 'CEO, Parkview Int.Ltd',
-        comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-        imgSrc: '/assets/mentor/user1.png',
+        name: "Zahra Ali",
+        profession: 'Ex Student',
+        comment: 'Thank you so much Nageen Mam for this beautiful journey and knowledge you gave us is blessing for us...',
+        imgSrc: '/assets/testimonial/female.png',
     },
     {
-        name: "Leslie Alexander",
-        profession: 'CEO, Parkview Int.Ltd',
-        comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-        imgSrc: '/assets/mentor/user2.png',
+        name: "Rimsha",
+        profession: 'Ex Student',
+        comment: 'Classes with sir Hamza are amazing. Really satisfied hope to learn more from you...',
+        imgSrc: '/assets/testimonial/female.png',
     },
     {
-        name: "Cody Fisher",
-        profession: 'CEO, Parkview Int.Ltd',
-        comment: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour',
-        imgSrc: '/assets/mentor/user3.png',
+        name: "manal.ajq",
+        profession: 'Ex Student',
+        comment: 'Pracitcal knowledge and tips, brillian and useful for such low cost courses. Recommended...',
+        imgSrc: '/assets/testimonial/female.png',
     },
 ]
 
@@ -103,7 +103,7 @@ export default class MultipleItems extends Component {
                         {postData.map((items, i) => (
                             <div key={i}>
                                 <div className={`bg-white m-4 p-5 my-20 relative ${i % 2 ? 'middleDiv' : 'testimonial-shadow'}`}>
-                                    <div className="absolute top-[-45px]">
+                                    <div className="absolute top-[-45px] w-12">
                                         <Image src={items.imgSrc} alt={items.imgSrc} width={100} height={100} className="inline-block" />
                                     </div>
                                     <h4 className='text-base font-normal text-darkgray my-4'>{items.comment}</h4>

@@ -33,6 +33,11 @@ const postData = [
         name: 'Afia kazmi',
         imgSrc: '/assets/mentor/05.png',
     },
+    {
+        profession: 'Seo Expert',
+        name: 'Ride Rashid',
+        imgSrc: '/assets/mentor/06.png',
+    },
 
 ]
 
@@ -119,9 +124,7 @@ export default class MultipleItems extends Component {
                                 <div className='m-3 py-10 md:my-10 text-center'>
                                     <div className="relative">
                                         <Image src={items.imgSrc} alt="user-image" width={306} height={0} className="inline-block m-auto" />
-                                        <div className="absolute right-[84px] md:bottom-[102px] bottom-14  bg-white rounded-full p-4">
-                                            <Image src={'/assets/mentor/linkedin.svg'} alt="linkedin-image" width={25} height={24} />
-                                        </div>
+
                                     </div>
                                     <div className="-mt-10">
                                         <h3 className='text-2xl font-semibold text-lightblack'>{items.name}</h3>
