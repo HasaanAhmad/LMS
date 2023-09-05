@@ -57,22 +57,22 @@ const page = () => {
         console.log("Selected Gender is", gender);
         console.log("Selected Course is", selectedCourse);
         try {
-            const preFilled = `https://docs.google.com/forms/d/e/1FAIpQLScGSLHc7ROFaM1LV6WAiMErJ3l_H2fV8SZlHKva5tUKH6iOIw//formResponse?usp=pp_url&entry.1339644007=${formData.name.replace(" ", "")}&entry.826474156=${formData.email}&entry.204990664=${formData.gender}&entry.642368857=${formData.age}&entry.9190230=${formData.whatsapp}&entry.471004916=${formData.selectedCourse.replace(" ", "")}&submit=Submit?`;
-            const resGform = await fetch(preFilled, {
-                mode: 'no-cors',
-            });
-            console.log("resGform", resGform);
+            // const preFilled = `https://docs.google.com/forms/d/e/1FAIpQLScGSLHc7ROFaM1LV6WAiMErJ3l_H2fV8SZlHKva5tUKH6iOIw//formResponse?usp=pp_url&entry.1339644007=${formData.name.replace(" ", "")}&entry.826474156=${formData.email}&entry.204990664=${formData.gender}&entry.642368857=${formData.age}&entry.9190230=${formData.whatsapp}&entry.471004916=${formData.selectedCourse.replace(" ", "")}&submit=Submit?`;
+            // const resGform = await fetch(preFilled, {
+            //     mode: 'no-cors',
+            // });
+            // console.log("resGform", resGform);
             // window.open(`https://docs.google.com/forms/d/e/1FAIpQLScGSLHc7ROFaM1LV6WAiMErJ3l_H2fV8SZlHKva5tUKH6iOIw//formResponse?usp=pp_url&entry.1339644007=${formData.name.replace(" ", "")}&entry.826474156=${formData.email}&entry.204990664=${formData.email}&entry.642368857=${formData.age}&entry.9190230=${formData.whatsapp}&entry.471004916=${formData.selectedCourse.replace(" ", "")}&submit=Submit?`, '_blank');
-            // const response = await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, USER_ID, formData);
-            // console.log('Email sent successfully!', response, form);
-            // if (response.status === 200) {
-            //     Router.push('/success');
-            // }
+            const response = await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, USER_ID, formData);
+            if (response.status === 200) {
+                // console.log('Email sent successfully!', response, form);
+                Router.push('/success');
+            }
 
 
 
         } catch (error) {
-            // console.error('Error sending email:', error);
+            console.error('Error sending email:', error);
         }
 
     };
