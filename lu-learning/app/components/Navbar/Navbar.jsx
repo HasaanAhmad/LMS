@@ -55,7 +55,7 @@ const Navbar = () => {
 
                             <div className="flex flex-shrink-0 items-center ">
                                 <img
-                                    className="block h-8 w-20 lg:hidden mt-2"
+                                    className="block h-16  lg:hidden mt-2"
                                     src={'/assets/logo/lu-logo.png'}
                                     alt="design-logo"
                                 />

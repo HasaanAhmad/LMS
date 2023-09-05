@@ -5,10 +5,14 @@ import { FaFacebook, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import regData from '../datasets/regData';
 import emailjs from 'emailjs-com';
 import { useRouter } from 'next/navigation';
+import { get } from "https";
 
 
 const page = () => {
-    const router = useRouter();
+    const Router = useRouter();
+    if (Router.isFallback) {
+        <h1>Data is loading</h1>;
+    }
     const [formData, setFormData] = useState({
 
         name: '',
@@ -18,9 +22,9 @@ const page = () => {
         whatsapp: '',
         selectedCourse: '',
     });
-    const SERVICE_ID = 'service_faielvg';
-    const TEMPLATE_ID = 'template_b8h78pg';
-    const USER_ID = 'ZAk0OVZR78JHmoQtk';
+    const SERVICE_ID = 'service_kkv6dqd';
+    const TEMPLATE_ID = 'template_8vezmlc';
+    const USER_ID = 't8i6IPKaCAbgeBGWF';
     const [courses, setCourses] = useState([]);
     const [submitDisabled, setSubmitDisabled] = useState(true);
 
@@ -53,13 +57,24 @@ const page = () => {
         console.log("Selected Gender is", gender);
         console.log("Selected Course is", selectedCourse);
         try {
-            const response = await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, USER_ID, formData);
-            console.log('Email sent successfully!', response, form);
+            const preFilled = `https://docs.google.com/forms/d/e/1FAIpQLScGSLHc7ROFaM1LV6WAiMErJ3l_H2fV8SZlHKva5tUKH6iOIw//formResponse?usp=pp_url&entry.1339644007=${formData.name.replace(" ", "")}&entry.826474156=${formData.email}&entry.204990664=${formData.gender}&entry.642368857=${formData.age}&entry.9190230=${formData.whatsapp}&entry.471004916=${formData.selectedCourse.replace(" ", "")}&submit=Submit?`;
+            const resGform = await fetch(preFilled, {
+                mode: 'no-cors',
+            });
+            console.log("resGform", resGform);
+            // window.open(`https://docs.google.com/forms/d/e/1FAIpQLScGSLHc7ROFaM1LV6WAiMErJ3l_H2fV8SZlHKva5tUKH6iOIw//formResponse?usp=pp_url&entry.1339644007=${formData.name.replace(" ", "")}&entry.826474156=${formData.email}&entry.204990664=${formData.email}&entry.642368857=${formData.age}&entry.9190230=${formData.whatsapp}&entry.471004916=${formData.selectedCourse.replace(" ", "")}&submit=Submit?`, '_blank');
+            // const response = await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, USER_ID, formData);
+            // console.log('Email sent successfully!', response, form);
+            // if (response.status === 200) {
+            //     Router.push('/success');
+            // }
+
+
 
         } catch (error) {
-            console.error('Error sending email:', error);
+            // console.error('Error sending email:', error);
         }
-        router.push('/successPage')
+
     };
 
     return (

@@ -20,7 +20,7 @@ const Index = () => {
       </div>
 
       <div className="container mx-auto px-4 text-center">
-        <Image src="/assets/about/help.png" width={500} height={500} className="rounded-full mx-auto" />
+        <Image src="/assets/about/help.png" width={500} height={500} alt="Help" className="rounded-full mx-auto" />
         <p className="text-gray-600 mb-4 text-lg sm:text-2xl">
           We are providing the best courses in cheapest price possible in Pakistan. No one can beat us in term of quality and price. Industry level mentors guide you to the level of expertise you want to achieve.
         </p>

@@ -23,7 +23,7 @@ const Drawer = ({ children, isOpen, setIsOpen }) => {
                 <article className="relative w-270 max-w-lg pb-10 flex flex-col space-y-6 h-full">
                     <header className="p-4 flex items-center justify-between"><img
                         className="h-12 w-40"
-                        src={"/assets/logo/logo.svg"}
+                        src={"/assets/logo/lu-logo.png"}
                         alt="Courses-Logo"
                         onClick={() => {
                             setIsOpen(false);

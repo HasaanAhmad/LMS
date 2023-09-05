@@ -10,8 +10,12 @@ const page = () => {
 
     const Params = useParams();
     const { id } = Params;
+
     let course;
     const router = useRouter();
+    if (router.isFallback) {
+        <h1>Data is loading</h1>;
+    }
 
     const handleEnroll = () => {
         router.push('/register')

@@ -1,5 +1,17 @@
 const regData = [
     {
+        heading: 'All Courses 50% Off (Special Bundle)',
+        heading2: 'All the courses included',
+        name: "LU Training and Development",
+        imgSrc: '/assets/courses/courseone.png',
+        li: 'freelancing-training',
+        banner: '/assets/coursesinfo/freelancing-training.jpeg',
+        students: 150,
+        classes: 12,
+        price: 3500,
+        rating: 4.7,
+    },
+    {
         heading: 'Freelancing Training',
         heading2: 'Fiverr and Upwork Masterclass',
         name: "LU Training and Development",
@@ -8,7 +20,7 @@ const regData = [
         banner: '/assets/coursesinfo/freelancing-training.jpeg',
         students: 150,
         classes: 12,
-        price: 20,
+        price: 1000,
         rating: 4.7,
     },
     ,
@@ -21,7 +33,7 @@ const regData = [
         banner: '/assets/coursesinfo/content-writing.jpeg',
         students: 130,
         classes: 12,
-        price: 20,
+        price: 1000,
         rating: 4.7,
     },
     {
@@ -31,9 +43,9 @@ const regData = [
         imgSrc: '/assets/courses/coursethree.png',
         li: 'canva-designing',
         banner: '/assets/coursesinfo/canva-designing.jpeg',
-        students: 120,
+        students: 11000,
         classes: 12,
-        price: 20,
+        price: 1000,
         rating: 4.7,
     },
     {
@@ -45,7 +57,7 @@ const regData = [
         li: 'wordpress-development',
         students: 150,
         classes: 12,
-        price: 20,
+        price: 1000,
         rating: 4.7,
     },
     {
@@ -57,7 +69,7 @@ const regData = [
         banner: '/assets/coursesinfo/search-engine-optimization.jpeg',
         students: 150,
         classes: 12,
-        price: 20,
+        price: 1000,
         rating: 4.7,
     },
     {
@@ -69,10 +81,10 @@ const regData = [
         li: 'spoken-english',
         students: 150,
         classes: 12,
-        price: 20,
+        price: 1000,
         rating: 4.7,
     },
-   
+
 ];
 
 export default regData;
