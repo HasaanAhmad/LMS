@@ -18,13 +18,13 @@ const postData = [
     {
         name: "Anamata_n55",
         profession: 'Ex Graphic Designing Student',
-        comment: 'First class and last with Dr Maira Ishaq. It was amazing. Platform of learning...',
+        comment: 'First class and last with Dr Maira Ishaq. It was amazing Platform of learning had lot of fun. Thank you so much Dr Maira Ishaq...',
         imgSrc: '/assets/testimonial/female.png',
     },
     {
         name: "mahamazib",
         profession: 'Ex Canva Student',
-        comment: 'Classes with Sir Hamza are amazing. Best platform to learn...',
+        comment: 'Classes with Sir Hamza are amazing. Best platform to learn. Really satisfied. Excited for more opportunities to come. Thank you Sir Hamza...',
         imgSrc: '/assets/testimonial/female.png',
     },
     {
