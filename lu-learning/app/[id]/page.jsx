@@ -2,7 +2,7 @@
 import React from 'react'
 import { FaStar, FaMoneyBill } from 'react-icons/fa';
 import Image from 'next/image';
-import courseData from "@/app/datasets/courseData"
+import courseData from '../datasets/courseData.js';
 import { useRouter, useParams } from 'next/navigation';
 
 
