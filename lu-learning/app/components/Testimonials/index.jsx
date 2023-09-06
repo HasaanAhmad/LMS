@@ -106,7 +106,7 @@ export default class MultipleItems extends Component {
                                     <div className="absolute h-20 top-[-45px] w-12">
                                         <Image src={items.imgSrc} alt={items.imgSrc} width={100} height={100} className="inline-block" />
                                     </div>
-                                    <h4 className='text-base font-normal text-darkgray my-4'>{items.comment}</h4>
+                                    <h4 className='text-base h-28 font-normal text-darkgray my-4'>{items.comment}</h4>
                                     <hr style={{ color: "#D7D5D5" }} />
                                     <div className="flex justify-between">
                                         <div>
