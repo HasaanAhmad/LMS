@@ -7,8 +7,9 @@ import emailjs from 'emailjs-com';
 import { useRouter } from 'next/navigation';
 import { get } from "https";
 
-
 const page = () => {
+    const [loading, setLoading] = useState(false);
+
     const Router = useRouter();
     if (Router.isFallback) {
         <h1>Data is loading</h1>;
@@ -50,6 +51,7 @@ const page = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        setLoading(true);
 
         const form = document.getElementById('registrationForm');
         const gender = formData.gender
@@ -73,6 +75,9 @@ const page = () => {
 
         } catch (error) {
             console.error('Error sending email:', error);
+        }
+        finally {
+            setLoading(false);
         }
 
     };
@@ -199,9 +204,9 @@ const page = () => {
                                         type="submit"
                                         onClick={handleSubmit}
                                         className={`mt-4 bg-green-500 text-white px-6 py-3 rounded-md hover:bg-green-700 ${submitDisabled ? 'opacity-50 px-6 py-3 bg-green-500 cursor-not-allowed' : ''}`}
-                                        disabled={submitDisabled}
+                                        disabled={submitDisabled || loading}
                                     >
-                                        Submit Registration
+                                        {loading ? <>Loading..</> : <>Submit Registration</>}
                                     </button>
                                 </div>
                             </div>

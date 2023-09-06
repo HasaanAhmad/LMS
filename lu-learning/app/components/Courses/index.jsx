@@ -3,8 +3,9 @@ import Slider from "react-slick";
 import React, { Component } from "react";
 import { StarIcon } from '@heroicons/react/24/solid';
 import Link from "next/link";
+import courseData from '../../datasets/courseData.js';
+
 import Image from "next/image";
-import courseData from "@/app/datasets/courseData";
 
 
 export default class MultipleItems extends Component {
