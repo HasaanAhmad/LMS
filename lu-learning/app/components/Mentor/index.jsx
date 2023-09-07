@@ -42,27 +42,54 @@ const postData = [
 ]
 
 // CAROUSEL SETTINGS
-
 function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "flex", justifyContent: "center", position: 'absolute', alignItems: "center", background: "#D5EFFA", padding: "28px", borderRadius: "30px", border: "1px solid #1A21BC" }}
-            onClick={onClick}
-        />
-    );
+const { className, style, onClick } = props;
+return (
+  <div
+    className={className}
+    style={{
+      ...style,
+      position: "absolute",
+      top: "50%",
+      marginRight: "30px",
+      marginLeft:"15px", // Adjust the right position as needed
+      display: "flex",
+      transform: "translateY(450%)",
+      justifyContent: "center",
+      alignItems: "center",
+      background: "#D5EFFA",
+      padding: "28px",
+      borderRadius: "30px",
+      border: "1px solid #1A21BC",
+    }}
+    onClick={onClick}
+  />
+);
 }
 
 function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "flex", justifyContent: "center", alignItems: "center", background: "#D5EFFA", padding: "28px", borderRadius: "30px", border: "1px solid #1A21BC" }}
-            onClick={onClick}
-        />
-    );
+const { className, style, onClick } = props;
+return (
+  <div
+    className={className}
+    style={{
+      ...style,
+      position: "absolute",
+      marginTop: "255px",
+      marginLeft: "30px",
+      marginRight:"15px", // Adjust the right position as needed
+      transform: "translateX(-2000%)",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      background: "#D5EFFA",
+      padding: "28px",
+      borderRadius: "30px",
+      border: "1px solid #1A21BC",
+    }}
+    onClick={onClick}
+  />
+);
 }
 
 
@@ -76,7 +103,7 @@ export default class MultipleItems extends Component {
             slidesToShow: 3,
             // centerMode: true,
             slidesToScroll: 1,
-            arrows: false,
+            arrows: true,
             autoplay: true,
             speed: 400,
             nextArrow: <SampleNextArrow className={undefined} style={undefined} onClick={undefined} />,

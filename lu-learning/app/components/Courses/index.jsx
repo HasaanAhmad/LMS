@@ -57,9 +57,7 @@ export default class MultipleItems extends Component {
                                 <div className='bg-white m-3 px-3 pt-3 pb-12 my-20 shadow-courses rounded-2xl h-[400] w-[1000]'>
                                     <div className="relative rounded-3xl">
                                         <Image src={items.imgSrc} alt="gaby" width={389} height={262} className="m-auto clipPath" />
-                                        <div className="absolute right-5 -bottom-2 bg-ultramarine rounded-full p-6">
-                                            <h3 className="text-white uppercase text-center text-sm font-medium">best <br /> seller</h3>
-                                        </div>
+                                        
                                     </div>
                                     <div className="px-3">
                                         <Link href={`/${items.li}`}>
