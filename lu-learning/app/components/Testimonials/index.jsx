@@ -48,7 +48,55 @@ const postData = [
 ]
 
 // CAROUSEL SETTINGS
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{
+                ...style,
+                position: "absolute",
+                top: "50%",
+                 // Adjust the right position as needed
+                marginRight: "-100px",
+                display: "flex",
+                transform: "translateY(450%)",
+                justifyContent: "center",
+                alignItems: "center",
+                background: "#8493E9",
+                padding: "28px",
+                borderRadius: "50%",
 
+            }}
+            onClick={onClick}
+        />
+    );
+}
+
+function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{
+                ...style,
+                color: "black",
+                position: "absolute",
+                marginTop: "255px",
+                marginLeft: "-100px",
+                transform: "translateX(-2000%)",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                background: "#8493E9",
+                padding: "28px",
+                borderRadius: "50%",
+
+            }}
+            onClick={onClick}
+        />
+    );
+}
 
 export default class MultipleItems extends Component {
 
@@ -60,11 +108,13 @@ export default class MultipleItems extends Component {
             slidesToShow: 3,
             // centerMode: true,
             slidesToScroll: 2,
-            arrows: false,
+            arrows: true,
             autoplay: false,
             speed: 500,
             autoplaySpeed: 2000,
             cssEase: "linear",
+            nextArrow: <SampleNextArrow className={undefined} style={undefined} onClick={undefined} />,
+            prevArrow: <SamplePrevArrow className={undefined} style={undefined} onClick={undefined} />,
             responsive: [
                 {
                     breakpoint: 1200,
@@ -78,10 +128,11 @@ export default class MultipleItems extends Component {
                 {
                     breakpoint: 800,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 1,
                         slidesToScroll: 1,
                         infinite: true,
-                        dots: false
+                        dots: false,
+                        arrows: false,
                     }
                 },
                 {
@@ -90,7 +141,8 @@ export default class MultipleItems extends Component {
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         infinite: true,
-                        dots: false
+                        dots: false,
+                        arrows: false,
                     }
                 }
             ]

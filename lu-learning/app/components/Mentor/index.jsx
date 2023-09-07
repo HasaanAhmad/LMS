@@ -51,15 +51,15 @@ function SampleNextArrow(props) {
                 ...style,
                 position: "absolute",
                 top: "50%",
-                marginRight: "30px",
-                marginLeft: "15px", // Adjust the right position as needed
+                 // Adjust the right position as needed
+                marginRight: "-100px",
                 display: "flex",
                 transform: "translateY(450%)",
                 justifyContent: "center",
                 alignItems: "center",
-                background: "#D5EFFA",
+                background: "#8493E9",
                 padding: "28px",
-
+                borderRadius: "50%",
 
             }}
             onClick={onClick}
@@ -77,14 +77,14 @@ function SamplePrevArrow(props) {
                 color: "black",
                 position: "absolute",
                 marginTop: "255px",
-                marginLeft: "30px",
-                marginRight: "15px", // Adjust the right position as needed
+                marginLeft: "-100px",
                 transform: "translateX(-2000%)",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                background: "#D5EFFA",
+                background: "#8493E9",
                 padding: "28px",
+                borderRadius: "50%",
 
             }}
             onClick={onClick}
@@ -126,7 +126,8 @@ export default class MultipleItems extends Component {
                         slidesToShow: 2,
                         slidesToScroll: 1,
                         infinite: true,
-                        dots: false
+                        dots: false,
+                        arrows: false,
                     }
                 },
                 {
@@ -135,7 +136,8 @@ export default class MultipleItems extends Component {
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         infinite: true,
-                        dots: false
+                        dots: false,
+                        arrows: false,
                     }
                 }
             ]
