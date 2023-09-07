@@ -43,53 +43,53 @@ const postData = [
 
 // CAROUSEL SETTINGS
 function SampleNextArrow(props) {
-const { className, style, onClick } = props;
-return (
-  <div
-    className={className}
-    style={{
-      ...style,
-      position: "absolute",
-      top: "50%",
-      marginRight: "30px",
-      marginLeft:"15px", // Adjust the right position as needed
-      display: "flex",
-      transform: "translateY(450%)",
-      justifyContent: "center",
-      alignItems: "center",
-      background: "#D5EFFA",
-      padding: "28px",
-      borderRadius: "30px",
-      border: "1px solid #1A21BC",
-    }}
-    onClick={onClick}
-  />
-);
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{
+                ...style,
+                position: "absolute",
+                top: "50%",
+                marginRight: "30px",
+                marginLeft: "15px", // Adjust the right position as needed
+                display: "flex",
+                transform: "translateY(450%)",
+                justifyContent: "center",
+                alignItems: "center",
+                background: "#D5EFFA",
+                padding: "28px",
+
+
+            }}
+            onClick={onClick}
+        />
+    );
 }
 
 function SamplePrevArrow(props) {
-const { className, style, onClick } = props;
-return (
-  <div
-    className={className}
-    style={{
-      ...style,
-      position: "absolute",
-      marginTop: "255px",
-      marginLeft: "30px",
-      marginRight:"15px", // Adjust the right position as needed
-      transform: "translateX(-2000%)",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      background: "#D5EFFA",
-      padding: "28px",
-      borderRadius: "30px",
-      border: "1px solid #1A21BC",
-    }}
-    onClick={onClick}
-  />
-);
+    const { className, style, onClick } = props;
+    return (
+        <div
+            className={className}
+            style={{
+                ...style,
+                color: "black",
+                position: "absolute",
+                marginTop: "255px",
+                marginLeft: "30px",
+                marginRight: "15px", // Adjust the right position as needed
+                transform: "translateX(-2000%)",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                background: "#D5EFFA",
+                padding: "28px",
+
+            }}
+            onClick={onClick}
+        />
+    );
 }
 
 
